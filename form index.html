@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title> Form Example & Information </title>
+
+    <style>
+      form {
+        padding: 60px;
+        width: 500px;
+        height: 500px;
+        margin: 5px auto;
+        background-color: lch(95.99% 1.17 226.02 / 0.995);
+        font-family: Arial, sans-serif;
+        text-align: left;
+      }
+    </style>
+
+  </head>
+  <body>
+    <form name="form">
+      <fieldset>
+        <legend> User Information </legend>
+
+        Name: <input type="text" name="fn" /> <br/> <br/>
+        Contact: <input type="number" name="fc" /> <br/> <br />
+        Email: <input type="text" name="fe" /> <br/> <br />
+        Address: <input type="text" name="fa" /> <br/> <br/>
+
+    
+        Gender: <br>
+        <input type="checkbox" id="Male" name="Gender" value="Male">
+        <label for="Male">Male</label> 
+        <input type="checkbox" id="Female" name="gender" value="Female">
+        <label for="Female">Female</label>
+        <input type="checkbox" id="Others" name="gender" value="Others">
+        <label for="Others">Others</label><br><br>
+       
+    Language: 
+         <input type="checkbox" id="English" name="Language" value="English">
+         <label for="English">English</label>
+
+          <input type="checkbox" id="Bangla" name="Language" value=" Bangla">
+         <label for="Bangla">Bangla</label>
+
+          <input type="checkbox" id="Arabic" name="Language" value="Arabic">
+         <label for="Arabic">Arabic</label> <br> <br>
+
+
+        <!-- <select id="language" name="Language">    
+            <option value="english">English</option> <br>
+            <option value="bangla">Bangla</option> <br>
+            <option value="arabic">Arabic</option> <br>
+            <option value="japanese">Japanese</option>
+        </select><br><br> -->
+
+
+    Education: <br>
+        <select id=" Education " name=" Education ">
+            <option value="MBA">MBA</option> <br>
+            <option value="BA">BA</option> <br>
+            <option value="HSC">HSC</option> <br>
+            <option value="SSC">SSC</option>
+        </select> <br><br>
+    
+    Course: <br>
+        <select name="txtCourse">
+          <option value="MBA">MBA</option>
+          <option value="BBA">BBA</option>
+          <option value="CIS">CIS</option>
+          <option value="EEE">EEE</option>
+        </select> <br> <br>
+
+        <input type="button" onclick="My_form()" value="Submit" />
+        <input type="reset" value="Reset" />
+      </fieldset>
+    </form>
+
+    <script>
+      function My_form() {
+        var n = document.form.fn.value;
+        var c = document.form.fc.value;
+        var e = document.form.fe.value;
+        var a = document.form.fa.value;
+
+        var p = window.open("", "", "width=400, height=400");
+        p.document.write("<h3> Submitted Information </h3>");
+        p.document.write("Name: " + n + "<br>");
+        p.document.write("Contact: " + c + "<br>");
+        p.document.write("Email: " + e + "<br>");
+        p.document.write("Address: " + a + "<br>");
+      }
+    </script>
+  </body>
+</html>

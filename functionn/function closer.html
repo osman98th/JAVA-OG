@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        // private
+      function myFunction() {
+        let a = 4;
+        let b = 6;
+        return a * b
+      }
+      document.write(myFunction());
+      document.write("<br>");
+
+    //   // global
+      let a = 4;
+      let b = 6;
+      let c = 10;
+
+      function myFunction() {
+        return a * b;
+      }
+
+      document.write(myFunction());
+      document.write("<br>");
+
+      function sub(){
+        return a - b;
+      }
+
+        function sub(){
+        return b + c;
+      }
+
+        function sub(){
+        return b / c;
+      }
+      document.write(sub());
+
+    </script>
+  </body>
+</html>

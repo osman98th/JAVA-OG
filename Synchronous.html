@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synchronous</title>
+  </head>
+  <body>
+    <h1>Synchronous</h1>
+    <h2>Synchronous: Synchronous learning means that the instructor and the students 
+        in the course engage with the course content and each other at the same time,
+         but from different locations.</h2>
+
+    <script>
+      console.log("hello");
+
+      function lengthyTask() {
+        for (let i = 0; i < 1890000000; i++) {}
+        console.log("Step 2: second task is complete");
+      }
+
+      console.log("Step 1: Begining");
+      lengthyTask();
+      console.log("step 3: End");
+    </script>
+  </body>
+</html>

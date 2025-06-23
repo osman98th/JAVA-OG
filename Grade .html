@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grad Point</title>
+</head>
+<body>
+
+    <script>
+        var point=prompt("Input your Result")
+
+        switch(true){
+            case (point>=90 && point<=100):
+            document.write("G");
+            break;
+
+            case (point>=80 && point<=89):
+            document.write("A+");
+            break;
+
+            case (point>=70 && point<=79):
+            document.write("A");
+            break;
+
+            case (point>=60 && point<=69):
+            document.write("A-");
+            break;
+
+            case (point>=50 && point<=59):
+            document.write("B");
+            break;
+
+            case (point>=40 && point<=49):
+            document.write("D");
+            break;
+
+            case (point>= 30 && point<=39):
+            document.write("Passed");
+            break;
+
+            default:
+            document.write("Congratulations");
+        
+        }
+    </script>
+</body>
+</html>

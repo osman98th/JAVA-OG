@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Abstruction</title>
+</head>
+<body>
+    <script>
+        class Course{
+            constructor(cname,cage,c_phone ){
+               this.name=cname; 
+               this.age=cage; 
+               this.phone=c_phone 
+            }
+            show(){
+     document.write("my Name is"+ this.name+ " my age is" + this.age +"phone"+ this.phone);
+            }
+        }
+
+        let newCourse= new Course("Osman", 25, 12000);
+           newCourse.show();
+           document.write("<br>");
+        // console.log();
+   
+        
+    </script>
+</body>
+</html>

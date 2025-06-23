@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+</head>
+<body>
+    <script>
+        var n =10,
+        first =0,
+        second = 1;
+        next =0;
+        for (i = 0; i <=n; i++){
+            if(i<=1){
+                next=i;
+            } else{
+                next = first +second;
+                first = second;
+                second =next;
+            }
+            document.write(next+" ");
+        }
+    </script>
+</body>

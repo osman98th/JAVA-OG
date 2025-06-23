@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Student Admission</title>
+  </head>
+
+  <body>
+    <form
+      action="#"
+      name="m"
+      ....
+      style="
+        width: 200px;
+        margin: 0px auto;
+        border: 1px solid gray;
+        padding: 10px;
+      "
+    >
+      <div>
+        Name<br />
+        <input type="text" name="txtName" />
+      </div>
+
+      <div>
+        Address<br />
+        <textarea name="txtAddress"></textarea>
+      </div>
+      <div>
+        Email<br />
+        <textarea name="txtEmail"></textarea>
+      </div>
+      <div>
+        <div>
+          Sex<br />
+          Male<input type="radio" name="rdoSex" value="Male" /> Female<input
+            type="radio"
+            name="rdoSex"
+            value="Female"
+          />
+        </div>
+        <input type="button" onclick="dyn_window()" value="Submit" />
+      </div>
+    </form>
+
+    <script language="javascript">
+      function dyn_window() {
+        var name = document.m.txtName.value;
+        var address = document.m.txtAddress.value;
+        var email = document.m.txtEmail.value;
+
+        var sex = "";
+
+        for (i = 0; i < document.m.rdoSex.length; i++) {
+          if (document.m.rdoSex[i].checked) {
+            sex = document.m.rdoSex[i].value;
+          }
+        }
+
+        // create new window here
+
+        doc = open("", "", "width=00px,height=200px");
+
+        with (doc.document) {
+          write("Name:" + name + "<br/>");
+          write("Address:" + address + "<br/>");
+          write("Email:" + email + "<br/>");
+          write("Sex:" + sex + "<br/>");
+          write(
+            "<input type='button' value='Close me' onclick='self.close();' />"
+          );
+          write(
+            "<input type='button' value='Print' onclick='self.print();' />"
+          );
+        }
+      } // end the function
+
+      const doc = document;
+      console.log(doc);
+    </script>
+  </body>
+</html>

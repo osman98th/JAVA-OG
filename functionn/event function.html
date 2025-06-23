@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="fname()">Click here</button>
+
+    <input type="button" value="increment" onclick="increment()" />
+    <input type="button" value="decrement" onclick="decrement()" />
+
+    <script>
+      function fname() {
+        alert("Hellow");
+      }
+      let a = 10;
+      function increment() {
+        console.log(a++);
+      }
+
+      function decrement() {
+        console.log(a--);
+      }
+    </script>
+  </body>
+</html>
