@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+     <div style="background-color: deepskyblue;  width: 500px;  margin: 40px auto; padding: 40px; ">
+
+    <form id="form1">
+            <fieldset> 
+                <legend  style="text-align: center;">Student Admission Form</legend>
+            Name: <br>
+                <input type="text" name="fn" id="fn"> <br>
+             Contact: <br>
+                <input type="number" name="con" id="con"> <br>
+
+             Email: <br>
+                <input type="text" name="email" id="email"> <br>
+
+            Remark: <br>
+                <textarea name="remark" id="remark"></textarea> <br>
+
+            Gender: <br>
+                <input type="radio" value="Male" name="m">Male
+                <input type="radio"  value="Female" name="m">Female
+                <input type="radio"  value="Others" name="m">Others <br> <br>
+
+            Education: <br>
+                <input type="checkbox" value="SSC" name="education" id="education">SSC
+                <input type="checkbox"  value="HSC" name="education" id="education">HSC <br> <br>
+
+            Course: <br>
+                <input type="checkbox" value="MSC" name="course" id="course">MSC
+                <input type="checkbox" value="IDB" name="course" id="course">IDB<br> <br>                
+
+             Location: <br>
+                <select name="" id="">
+                    <option value="DHA" id="location" name="location">DHA</option>
+                    <option value="Cha" id="location" name="location">Cha</option>
+                    <option value="Barishal" id="location" name="location">Barishal</option>
+                </select> <br> <br>
+
+                <input type="reset"  value="Reset">
+                <input type="submit"  value="Submit">
+
+            </fieldset>
+        </form>
+     </div>
+
+     <!-- javaScript -->
+<script>
+    class FormValues {
+      constructor(formData) {
+        for (let [name, value] of formData) {
+          this[name] = formData.getAll(name).join(",");
+        }
+      }
+
+      // all data
+      userData() {
+        var result = "Name: " + this.fn + "<br>";
+        result += "Contact: " + this.con + "<br>";
+        result += "Email: " + this.email + "<br>";
+        result += "Remark: " + this.remark + "<br>";
+        result += "Gender: " + this.m + "<br>";
+        result += "Education: " + this.education + "<br>";
+        result += "Course: " + this.course + "<br>";
+
+        var win = window.open("", "", "width=400,height=400");
+                          // global This window
+        win.document.write(result);
+                                // public
+      }
+    }
+
+    form1.onsubmit = async (event) => {
+      event.preventDefault();
+      var form = document.querySelector("#form1");
+      var form_data = new FormData(form);
+      var f = new FormValues(form_data);
+
+      f.userData();
+    };
+  </script>
+
+</body>
+</html>
